@@ -1,0 +1,14 @@
+# Core dependencies
+# No external dependencies required - using only Python standard library
+
+# Optional dependencies for enhanced functionality
+# cryptography>=3.4.8  # For enhanced SSL/TLS support
+# asyncio  # Already included in Python 3.7+
+# typing  # Already included in Python 3.5+
+# dataclasses  # Already included in Python 3.7+
+
+# Development dependencies (optional)
+# pytest>=6.2.5  # For testing
+# black>=21.7b0  # For code formatting
+# flake8>=3.9.2  # For linting
+# mypy>=0.910  # For type checking 
