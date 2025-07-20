@@ -41,6 +41,9 @@ class TCPServer:
         self.setup_signal_handlers()
         
     def setup_logging(self):
+        import os
+        os.makedirs('logs', exist_ok=True)
+        
         logging.basicConfig(
             level=logging.INFO,
             format='%(asctime)s - %(levelname)s - %(message)s',
@@ -66,7 +69,11 @@ class TCPServer:
     def create_server_socket(self) -> socket.socket:
         server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-        server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEPORT, 1)
+        
+        try:
+            server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEPORT, 1)
+        except AttributeError:
+            pass
         
         if self.enable_ssl and self.cert_file and self.key_file:
             context = ssl.create_default_context(ssl.Purpose.CLIENT_AUTH)

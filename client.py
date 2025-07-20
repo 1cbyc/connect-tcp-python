@@ -29,6 +29,9 @@ class TCPClient:
         self.setup_signal_handlers()
         
     def setup_logging(self):
+        import os
+        os.makedirs('logs', exist_ok=True)
+        
         logging.basicConfig(
             level=logging.INFO,
             format='%(asctime)s - %(levelname)s - %(message)s',
