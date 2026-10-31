@@ -1,3 +1,5 @@
+> **Licensing update (31 October 2026):** The current policy requires prior written permission for reuse and a separate agreement for AI training. See [LICENSE](LICENSE). Earlier grants remain valid for previously licensed material; [LICENSE.previous](LICENSE.previous) preserves those terms. Any older license descriptions below describe the previous policy. Contact [ei@nsisong.com](mailto:ei@nsisong.com).
+
 # Connect TCP Python
 
 A TCP server and client implementation in Python with authentication, SSL support, logging, and interactive command interface.
@@ -187,4 +189,4 @@ This project is open source and available under the MIT License.
 
 ## Support
 
-For issues and questions, please open an issue on GitHub and I would respond promptly. 
+For issues and questions, please open an issue on GitHub and I would respond promptly.
